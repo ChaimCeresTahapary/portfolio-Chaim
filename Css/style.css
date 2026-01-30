@@ -1,0 +1,162 @@
+/* Cleaned stylesheet for portfolio */
+
+/* Variables */
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #102a43;
+  --muted: #51627a;
+  --accent: #2774f0;
+  --accent-2: #6dd3ff;
+  --radius: 12px;
+  --max-width: 1100px;
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Layout container */
+main{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+/* Header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1rem 2rem;
+  background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(16,42,67,0.06);
+}
+.logo{font-weight:700;font-size:1.15rem;color:var(--text)}
+.site-header nav{display:flex;gap:1rem;align-items:center}
+.site-header nav a{
+  text-decoration:none;color:var(--muted);padding:0.4rem 0.6rem;border-radius:8px;font-weight:500;
+  transition:color .18s ease, background .18s ease, transform .12s ease;
+}
+.site-header nav a:hover{color:var(--text);background:rgba(39,116,240,0.06);transform:translateY(-1px)}
+
+/* Small avatar in header */
+.profile-img{display:block;object-fit:cover}
+.site-header .profile-img{width:36px;height:36px;border-radius:50%;margin-left:0.75rem;object-fit:cover}
+
+/* HERO: two-column grid with gallery row below */
+.hero{
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);
+  color:#fff;
+  padding:2.5rem;
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(39,116,240,0.12);
+  margin:2rem 0;
+}
+
+/* Grid container for left image and right text */
+.hero-grid{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:2rem;
+  align-items:start;
+}
+
+/* Left: profile image */
+.hero-img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(6,24,60,0.12);
+}
+
+/* Right: text card */
+.hero-card{
+  background:rgba(255,255,255,0.06);
+  padding:1.25rem;
+  border-radius:12px;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+.hero-card h1{margin:0 0 .6rem 0;font-size:1.8rem;line-height:1.05}
+.hero-card p{margin:0 0 1rem 0;color:rgba(255,255,255,0.95);max-width:60ch}
+
+/* Gallery row at bottom of hero (full width) */
+.gallery-row{
+  margin-top:1.5rem;
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+.thumb{
+  width:220px;
+  height:130px;
+  object-fit:cover;
+  border-radius:10px;
+  border:4px solid rgba(255,255,255,0.12);
+  box-shadow:0 8px 20px rgba(6,24,60,0.12);
+}
+
+/* Sections */
+.section{background:transparent;margin:2.25rem 0;padding:1.25rem}
+.section h2{margin-top:0;font-size:1.25rem;color:var(--text)}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1rem;margin-top:1rem;
+}
+.project-card{
+  background:var(--card);border-radius:12px;padding:1rem;box-shadow:0 8px 20px rgba(16,42,67,0.05);
+  display:flex;flex-direction:column;gap:.6rem;
+}
+.project-card h3{margin:0;font-size:1.05rem;color:var(--text)}
+.project-card p{margin:0;color:var(--muted);font-size:.95rem}
+.project-card a{margin-top:auto;display:inline-block;color:var(--accent);text-decoration:none;font-weight:600}
+.project-card a:hover{text-decoration:underline}
+
+/* button primary */
+.btn-primary{
+  display:inline-block;
+  padding:0.6rem 1.2rem;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  transition:background .18s ease, transform .12s ease;
+}
+
+/* Contact */
+.contact-list{list-style:none;padding:0;margin:0.6rem 0 0 0;display:grid;gap:0.4rem}
+.contact-list li{color:var(--muted)}
+
+/* Footer */
+.site-footer{text-align:center;padding:1.25rem;color:var(--muted);margin-top:2rem;font-size:.95rem}
+
+/* Responsive: stack and center on small screens */
+@media (max-width:720px){
+  main{padding:1rem}
+  .hero{padding:1.25rem}
+  .hero-grid{grid-template-columns:1fr; text-align:center}
+  .hero-card{padding:1rem}
+  .hero-card h1{font-size:1.4rem}
+  .gallery-row{justify-content:center}
+  .thumb{width:140px;height:90px}
+  .site-header{padding:.6rem 1rem}
+  .site-header nav{gap:.5rem}
+}

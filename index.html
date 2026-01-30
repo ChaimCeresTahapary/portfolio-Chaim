@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Chaim Ceres Tahapary</title>
+    <link rel="stylesheet" href="Css/style.css" />
+</head>
+<body>
+<header class="site-header">
+    <div class="logo">Chaim Ceres Tahapary</div>
+    <!-- small header avatar to match header styles -->
+    <img src="images/profiel_foto.jpeg" alt="Chaim profiel" class="profile-img" />
+    <nav>
+        <a href="#about">Over mij</a>
+        <a href="#projects">Projecten</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <img src="images/profiel_foto.jpeg" alt="Profile photo" class="hero-img" />
+            </div>
+            <div class="hero-right">
+                <div class="hero-card">
+                    <h1>Hey, ik ben Chaim Ceres Tahapary</h1>
+                    <p>
+                        Ik ben Chaim Ceres Tahapary, tweedejaars CMGT‑student aan de Hogeschool Rotterdam.
+                        Ik hou van gamen, 3D‑geprinte cosplay props maken en ik ben een grote motorliefhebber.
+                        Mijn interesse ligt in het combineren van creativiteit en technologie.
+                    </p>
+                    <a href="#projects" class="btn-primary">Bekijk mijn projecten</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery moved to bottom of the hero, full width -->
+        <div class="gallery-row">
+            <img src="images/" alt="Project 1" class="thumb">
+            <img src="images/project2.jpg" alt="Project 2" class="thumb">
+            <img src="images/project3.jpg" alt="Project 3" class="thumb">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>Over mij</h2>
+         <h3>Wat ik nu leer binnen CMGT</h3>
+            <p>
+                Ik ben een CMGT‑student die zich ontwikkelt in zowel programmeren als design.
+                Tijdens mijn opleiding werk ik met verschillende talen en tools die mij helpen om creatieve en technische projecten te bouwen.
+            </p>
+
+        <h2>Programmeertalen & Frameworks</h2>
+            <ul>
+                <li>- HTML & CSS – de basis van webdesign </li>
+                <li>- JavaScript – interactieve websites en webapplicaties </li>
+                <li> - PHP – backend‑ontwikkeling</li>
+                <li>- Laravel – modern PHP‑framework</li>
+                <li>- React – frontend‑framework voor dynamische interfaces</li>
+                <li>- Node.js – server‑side JavaScript</li>
+            </ul>
+            <h2> Design & Tools </h2>
+            <ul>
+                <li>- Figma – UI/UX‑ontwerp</li>
+                <li>- Canva – snelle visuele content</li>
+                <li>- GitHub – versiebeheer en samenwerken aan projecten</li>
+            </ul>
+
+
+                <h2>Mijn mindset</h2>
+            <p>
+                Ik ben enthousiast om nieuwe technologieën te leren en mezelf steeds verder te ontwikkelen.
+            Ik hou ervan om te experimenteren, nieuwe skills op te bouwen en mijn projecten steeds professioneler te maken.
+            </p>
+
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projecten</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <h3>Game - space shooter</h3>
+                <p>ik heb in periode 4 heb ik een game gemaakt met excaliber wat ik erg leuk vondt om te maken.</p>
+                <a href="#" target="_blank">Bekijk project</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Webservice - Motor Album</h3>
+                <p>Nog een project. Focus op wat jij hebt gedaan en wat je hebt geleerd.</p>
+                <a href="#" target="_blank">Bekijk project</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Wil je met me samenwerken of meer weten? Stuur me gerust een bericht.</p>
+        <ul class="contact-list">
+            <li><strong>Email:</strong> 1099372@hr.nl </li>
+            <li><strong>GitHub:</strong> <a href="#" target="_blank">github.com/jouwnaam</a></li>
+            <li><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/jouwnaam</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Chaim. Alle rechten voorbehouden.</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
