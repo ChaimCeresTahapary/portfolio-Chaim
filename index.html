@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Chaim Ceres Tahapary</title>
+    <title>Portfolio — Chaim Ceres Tahapary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css" />
 </head>
 <body>
+
 <header class="site-header">
-    <div class="logo">Portfolio Website - Chaim Ceres Tahapary</div>
-    <!-- small header avatar to match header styles -->
-    <a href="https://github.com/ChaimCeresTahapary/" target="_blank">
+    <div class="logo">
+        <span class="logo-plate">Chaim Ceres Tahapary</span>
+    </div>
+
+    <nav>
+        <a href="#about"><span class="ep-tag">EP.01</span>Over mij</a>
+        <a href="#projects"><span class="ep-tag">EP.02</span>Projecten</a>
+        <a href="#contact"><span class="ep-tag">EP.03</span>Contact</a>
+    </nav>
+
+    <a href="https://github.com/ChaimCeresTahapary/" target="_blank" class="header-github">
         <img src="images/github_profiel.png" alt="Chaim github profiel" class="profile-img">
     </a>
-    <nav>
-        <a href="#about">Over mij</a>
-        <a href="#projects">Projecten</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
 
 <main>
     <section class="hero">
+        <div class="speed-burst" aria-hidden="true"></div>
+        <div class="halftone" aria-hidden="true"></div>
+
         <div class="hero-grid">
             <div class="hero-left">
-                <img src="images/ChaimPfp.png" alt="Profile photo" class="hero-img" />
+                <div class="panel-frame">
+                    <img src="images/ChaimPfp.png" alt="Profielfoto Chaim" class="hero-img" />
+                    <span class="panel-corner">01</span>
+                </div>
             </div>
             <div class="hero-right">
                 <div class="hero-card">
-                    <h1>Hey, ik ben Chaim Ceres Tahapary</h1>
+                    <span class="chapter-tag">EPISODE 00 — MAIN CHARACTER</span>
+                    <h1>Hey, ik ben<br>Chaim Ceres Tahapary</h1>
                     <p>
-                        Ik ben Chaim Ceres Tahapary, tweedejaars CMGT‑student aan de Hogeschool Rotterdam.
-                        Ik hou van gamen & manga/anime, 3D‑geprinte cosplay props maken en ik ben een grote motorliefhebber.
+                        Tweedejaars CMGT‑student aan de Hogeschool Rotterdam. Ik hou van gamen &amp; manga/anime,
+                        3D‑geprinte cosplay props maken en ik ben een grote motorliefhebber.
                         Mijn interesse ligt in het combineren van creativiteit en technologie.
                     </p>
                     <a href="#projects" class="btn-primary">Bekijk mijn projecten</a>
@@ -39,82 +53,110 @@
             </div>
         </div>
 
-        <!-- Gallery moved to bottom of the hero, full width -->
         <div class="gallery-row">
-            <img src="images/dragonball.jpg" alt="games die ik graag speel" class="thumb">
-            <img src="images/cosplay_helm.jpeg" alt="cosplay plannen" class="thumb">
-            <img src="images/motorfiets.jpeg" alt="passie voor motoren" class="thumb">
+            <figure class="panel-frame small">
+                <img src="images/dragonball.jpg" alt="games die ik graag speel" class="thumb">
+                <span class="panel-corner">02</span>
+                <figcaption>Favoriete Manga/Anime</figcaption>
+            </figure>
+            <figure class="panel-frame small">
+                <img src="images/cosplay_helm.jpeg" alt="cosplay plannen" class="thumb">
+                <span class="panel-corner">03</span>
+                <figcaption>Mijn recente cosplay Prop</figcaption>
+            </figure>
+            <figure class="panel-frame small">
+                <img src="images/motorfiets.jpeg" alt="passie voor motoren" class="thumb">
+                <span class="panel-corner">04</span>
+                <figcaption>Mijn Motor</figcaption>
+            </figure>
         </div>
     </section>
 
     <section id="about" class="section">
-         <h2>Wat ik nu leer binnen CMGT</h2>
-            <p>
-                Ik ben een CMGT‑student die zich ontwikkelt in zowel programmeren als design.
-                Tijdens mijn opleiding werk ik met verschillende talen en tools die mij helpen om creatieve en technische projecten te bouwen.
-            </p>
+        <span class="chapter-tag">EPISODE 01</span>
+        <h2>Wat ik nu leer binnen CMGT</h2>
+        <p class="lead">
+            Ik ben een CMGT‑student die zich ontwikkelt in zowel programmeren als design.
+            Tijdens mijn opleiding werk ik met verschillende talen en tools die mij helpen om creatieve
+            en technische projecten te bouwen.
+        </p>
 
-        <h2>Programmeertalen & Frameworks</h2>
-            <ul>
-                <li>- HTML & CSS – de basis van webdesign </li>
-                <li>- JavaScript – interactieve websites en webapplicaties </li>
-                <li> - PHP – backend‑ontwikkeling</li>
-                <li>- Laravel – modern PHP‑framework</li>
-                <li>- React – frontend‑framework voor dynamische interfaces</li>
-                <li>- Node.js – server‑side JavaScript</li>
-            </ul>
-            <h2> Design & Tools </h2>
-            <ul>
-                <li>- Figma – UI/UX‑ontwerp</li>
-                <li>- Canva – snelle visuele content</li>
-                <li>- GitHub – versiebeheer en samenwerken aan projecten</li>
-            </ul>
+        <div class="skill-columns">
+            <div class="skill-panel">
+                <h3>Programmeertalen &amp; Frameworks</h3>
+                <ul class="tag-list">
+                    <li>HTML &amp; CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>React</li>
+                    <li>React-Native</li>
+                    <li>Node.js</li>
+                    <li>Ren'Py- Python scripting</li>
+                </ul>
+            </div>
+            <div class="skill-panel">
+                <h3>Design &amp; Tools</h3>
+                <ul class="tag-list">
+                    <li>Figma</li>
+                    <li>Canva</li>
+                    <li>GitHub</li>
+                    <li>draw sql</li>
+                </ul>
+            </div>
+        </div>
 
-
-                <h2>Mijn mindset</h2>
+        <div class="speech-bubble">
             <p>
                 Ik ben enthousiast om nieuwe technologieën te leren en mezelf steeds verder te ontwikkelen.
-            Ik hou ervan om te experimenteren, nieuwe skills op te bouwen en mijn projecten steeds professioneler te maken.
+                Ik hou ervan om te experimenteren, nieuwe skills op te bouwen en mijn projecten steeds
+                professioneler te maken.
             </p>
-
+        </div>
     </section>
 
     <section id="projects" class="section">
+        <span class="chapter-tag">EPISODE 02</span>
         <h2>Projecten</h2>
+
         <div class="projects-grid">
             <article class="project-card">
-                <h3>Game - space shooter</h3>
-                <p>ik heb in periode 4 heb ik een game gemaakt met excalibur wat ik erg leuk vondt om te maken.</p>
-                <a href="https://chaimcerestahapary.github.io/space-shooter/" target="Link naar Game starten">Bekijk project</a>
+                <span class="panel-corner static">01</span>
+                <h3>Game — Space Shooter</h3>
+                <p>Ik heb in periode 4 een game gemaakt met Excalibur wat ik erg leuk vond om te maken. NOTE:
+                    (Dit moet je op je pc of laptop spelen)</p>
+                <a href="https://chaimcerestahapary.github.io/space-shooter/" target="_blank" class="btn-project">Bekijk project →</a>
             </article>
 
             <article class="project-card">
-                <h3>Webservice - Motor Album</h3>
-                <p>Workin progress.</p> <!-- moet nog verder uitgewerkt worden zodat het optimaal is  -->
-                <a href="#" target="_blank">Bekijk project</a>
+                <span class="panel-corner static">02</span>
+                <h3>Webservice — Motor Album</h3>
+                <p>Work in progress.</p>
+                <a href="#" target="_blank" class="btn-project disabled">Binnenkort beschikbaar</a>
             </article>
         </div>
     </section>
 
     <section id="contact" class="section">
+        <span class="chapter-tag">EPISODE 03</span>
         <h2>Contact</h2>
-        <p>Wil je meer weten? Stuur me gerust een bericht.</p>
+        <p class="lead">Wil je meer weten? Stuur me gerust een bericht.</p>
+
         <ul class="contact-list">
-            <li><strong>Email:</strong> 1099372@hr.nl </li> <!-- moet nog een link maken zodat je gelijk een bericht kan sturen vanuit je mail -->
-            <li><strong>GitHub:</strong> <a href="https://github.com/ChaimCeresTahapary?tab=repositories" target="_blank">github.com/ChaimCeresTahapary
-            </a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chaim-tahapary-7149b5242/" target="_blank">linkedin.com/in/Chaim Ceres Tahapary</a></li>
-            <!-- nog niet veel gedaan op LinkedIn maar wel een beginnetje gemaakt  -->
+            <li><strong>Email</strong><span>1099372@hr.nl</span></li>
+            <li><strong>GitHub</strong><a href="https://github.com/ChaimCeresTahapary?tab=repositories" target="_blank">github.com/ChaimCeresTahapary</a></li>
+            <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/chaim-tahapary-7149b5242/" target="_blank">linkedin.com/in/chaim-tahapary</a></li>
         </ul>
     </section>
 </main>
 
 <footer class="site-footer">
-    <p>© <span id="year"></span> Chaim. Alle rechten voorbehouden.</p>
+    <p>© <span id="year"></span> Chaim Ceres Tahapary. Alle rechten voorbehouden.</p>
 </footer>
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
